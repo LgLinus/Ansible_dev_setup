@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create a file
+      file: path=/tmp/testing.txt state=touch
+    - copy:
+        src: hello_world.txt
+        dest: /tmp/hello_world.txt
