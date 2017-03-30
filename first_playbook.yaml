@@ -6,3 +6,25 @@
     - copy:
         src: hello_world.txt
         dest: /tmp/hello_world.txt
+    - name: Install libreoffice
+      apt:
+        name: libreoffice
+        update_cache: yes
+      become: true
+#    - name: Add repository
+ #     apt_repository:
+  #      repo: deb add-apt-repository ppa:openjdk-r/ppa
+   #     state: present
+    #  become: true
+    #- name: Install opendjk7
+     # apt:
+     #   name: openjdk-7-jdk:amd64
+      #  update_cache: yes
+       # state: build-dep
+#      become: true
+ #   - name: Install dropbox
+#      command: ' wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -'
+  #    become: true
+#
+#    - name: Install dropbox
+#      shell: 'cd ~ && wget -O - "https://www.dropbox.com/download/?plat=lnx.x86_64" | tar xzf -'
