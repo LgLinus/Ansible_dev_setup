@@ -1,11 +1,13 @@
 ---
-- hosts: localhost
+- hosts: main
   tasks:
     - name: Create a file
       file: path=/tmp/testing.txt state=touch
     - copy:
         src: hello_world.txt
         dest: /tmp/hello_world.txt
+- hosts: localhost
+  tasks:
     - name: Install libreoffice
       apt:
         name: libreoffice
