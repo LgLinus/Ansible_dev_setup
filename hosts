@@ -1,0 +1,9 @@
+# vim:filetype=dosini
+[main]
+localhost
+mercury
+
+
+[dev_machines]
+triplet
+mercury

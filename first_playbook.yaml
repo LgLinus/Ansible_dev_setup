@@ -16,6 +16,11 @@
 
 - hosts: dev_machines
   tasks:
+    - name: Add bluefish repo
+      apt_repository:
+        repo: deb http://ftp.se.debian.org/debian jessie main
+        state: present
+      become: true
     - name: Install bluefish
       apt:
         name: bluefish
