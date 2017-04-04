@@ -13,6 +13,15 @@
         name: libreoffice
         update_cache: yes
       become: true
+
+- hosts: dev_machines
+  tasks:
+    - name: Install bluefish
+      apt:
+        name: bluefish
+      become: true
+# rpeo
+#http://ftp.se.debian.org/debian jessie main 
 #    - name: Add repository
  #     apt_repository:
   #      repo: deb add-apt-repository ppa:openjdk-r/ppa
